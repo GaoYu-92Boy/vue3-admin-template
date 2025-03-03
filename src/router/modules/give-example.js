@@ -1,128 +1,62 @@
-import Layout from '@/layout/layout'
+export const markdown = {
+  path: 'markdown',
+  name: 'markdown',
+  component: () => import('@/views/give-example/markdown/markdown')
+}
 
-export const giveExample = [
-  {
-    path: '/markdown',
-    name: 'markdown',
-    component: Layout,
-    redirect: '/markdown/index',
-    children: [
-      {
-        path: 'index',
-        name: 'markdownIndex',
-        component: () => import('@/views/give-example/markdown/markdown'),
-        meta: { title: 'Markdown', icon: 'markdown' }
-      }
-    ]
-  },
-  {
-    path: '/dom-to-image',
-    name: 'domToImage',
-    component: Layout,
-    redirect: '/dom-to-image/index',
-    children: [
-      {
-        path: 'index',
-        name: 'domToImageIndex',
-        component: () =>
-          import('@/views/give-example/dom-to-image/dom-to-image'),
-        meta: { title: 'DomToImage', icon: 'dom-to-image' }
-      }
-    ]
-  },
-  {
-    path: '/html2canvas',
-    name: 'html2canvas',
-    component: Layout,
-    redirect: '/html2canvas/index',
-    children: [
-      {
-        path: 'index',
-        name: 'html2canvasIndex',
-        component: () => import('@/views/give-example/html2canvas/html2canvas'),
-        meta: { title: 'Html2canvas', icon: 'dom-to-image' }
-      }
-    ]
-  },
-  {
-    path: '/qrcode',
-    name: 'qrcode',
-    component: Layout,
-    redirect: '/qrcode/index',
-    children: [
-      {
-        path: 'index',
-        name: 'qrcodeIndex',
-        component: () => import('@/views/give-example/qrcode/qrcode'),
-        meta: { title: 'QRCode', icon: 'qrcode' }
-      }
-    ]
-  },
-  {
-    path: '/clipboard',
-    name: 'clipboard',
-    component: Layout,
-    redirect: '/clipboard/index',
-    children: [
-      {
-        path: 'index',
-        name: 'clipboardIndex',
-        component: () => import('@/views/give-example/clipboard/clipboard'),
-        meta: { title: 'Clipboard', icon: 'clipboard' }
-      }
-    ]
-  },
-  {
-    path: '/pie-chart',
-    name: 'PieChart',
-    component: Layout,
-    redirect: '/pie-chart/index',
-    children: [
-      {
-        path: 'index',
-        name: 'PieChartIndex',
-        component: () => import('@/views/give-example/echart/pie-chart'),
-        meta: { title: 'Pie Chart', icon: 'chart' }
-      }
-    ]
-  },
-  {
-    path: '/excel',
-    name: 'Excel',
-    component: Layout,
-    redirect: '/excel/export-excel',
-    meta: {
-      title: 'Excel',
-      icon: 'excel',
-      roles: ['admin', 'editor']
-    },
-    children: [
-      {
-        path: 'export-excel',
-        name: 'ExportExcel',
-        component: () => import('@/views/give-example/excel/export-excel'),
-        meta: { title: 'Export Excel' }
-      },
-      {
-        path: 'select-excel',
-        name: 'SelectExcel',
-        component: () => import('@/views/give-example/excel/select-excel'),
-        meta: { title: 'Export Selected' }
-      },
-      {
-        path: 'merge-header',
-        name: 'MergeExcel',
-        component: () => import('@/views/give-example/excel/merge-header'),
-        meta: { title: 'Merge Header' }
-      },
-      {
-        path: 'upload-excel',
-        name: 'Uploadxcel',
-        component: () => import('@/views/give-example/excel/upload-excel'),
-        meta: { title: 'Upload Excel' }
-      }
-    ]
-  }
+export const exportExcel = {
+  path: 'export-excel',
+  name: 'export-excel',
+  component: () => import('@/views/give-example/excel/export-excel')
+}
+
+export const selectExcel = {
+  path: 'select-excel',
+  name: 'select-excel',
+  component: () => import('@/views/give-example/excel/select-excel')
+}
+
+export const mergeHeader = {
+  path: 'merge-header',
+  name: 'merge-header',
+  component: () => import('@/views/give-example/excel/merge-header')
+}
+
+export const uploadExcel = {
+  path: 'upload-excel',
+  name: 'upload-excel',
+  component: () => import('@/views/give-example/excel/upload-excel')
+}
+export const domToImage = {
+  path: 'dom-to-image',
+  name: 'dom-to-image',
+  component: () => import('@/views/give-example/dom-to-image/dom-to-image')
+}
+export const qrcode = {
+  path: 'qrcode',
+  name: 'qrcode',
+  component: () => import('@/views/give-example/qrcode/qrcode')
+}
+export const clipboard = {
+  path: 'clipboard',
+  name: 'clipboard',
+  component: () => import('@/views/give-example/clipboard/clipboard')
+}
+
+export const pieChart = {
+  path: 'pie-chart',
+  name: 'pie-chart',
+  component: () => import('@/views/give-example/echart/pie-chart.vue')
+}
+
+export default [
+  markdown,
+  exportExcel,
+  selectExcel,
+  mergeHeader,
+  uploadExcel,
+  domToImage,
+  qrcode,
+  clipboard,
+  pieChart
 ]
-
-export default giveExample

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="userInfo" class="user-container">
+  <div class="user-container">
     <el-dropdown trigger="click">
       <div class="user-wrapper">
         <img
@@ -33,7 +33,9 @@ const userInfo = computed(() => userStore.userInfo)
 
 const logout = async () => {
   await userStore.logout()
+
   permissionStore.addRoutes = []
+
   router.push(`/login?redirect=${route.fullPath}`)
 }
 </script>
